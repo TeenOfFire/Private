@@ -667,10 +667,7 @@ async def advantage_spell_chok(msg):
     await asyncio.sleep(20)
     await k.delete()
 
-    k = async def global_filters(client, message, text=False):
-    if SELF_DELETE:
-            await asyncio.sleep(SELF_DELETE_SECONDS)
-            await k.delete()
+async def global_filters(client, message, text=False):
     group_id = message.chat.id
     name = text or message.text
     reply_id = message.reply_to_message.id if message.reply_to_message else message.id
