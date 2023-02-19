@@ -13,7 +13,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '1736204'))
 API_HASH = environ.get('API_HASH', '890d40e0f91a4de32dec2965444b2cbe')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6062946689:AAHof6thOdutNSm1EtoUGOFLEv90wfhEKBo')
 
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
@@ -28,9 +28,9 @@ auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', '')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Natalie:Natalie@natalie.lmsyqf5.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Natalie")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Natalie')
 
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001652564383'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '5884491121')
