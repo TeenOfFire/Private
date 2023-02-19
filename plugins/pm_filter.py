@@ -27,9 +27,6 @@ SPELL_CHECK = {}
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     k = await global_filters(client, message)
-    if SELF_DELETE:
-                await asyncio.sleep(SELF_DELETE_SECONDS)
-                await k.delete()
     if k == False:
         await auto_filter(client, message)
 
@@ -670,7 +667,10 @@ async def advantage_spell_chok(msg):
     await asyncio.sleep(20)
     await k.delete()
 
-async def global_filters(client, message, text=False):
+    k = async def global_filters(client, message, text=False):
+    if SELF_DELETE:
+            await asyncio.sleep(SELF_DELETE_SECONDS)
+            await k.delete()
     group_id = message.chat.id
     name = text or message.text
     reply_id = message.reply_to_message.id if message.reply_to_message else message.id
