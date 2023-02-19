@@ -90,7 +90,7 @@ async def send_for_index(bot, message):
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         return await message.reply(
-            f'<b>❓Index This Channel Files❓</b>\n\n🔆<b>Chat ID/ Username ›</b> <code>{chat_id}</code>',
+            f'<b>❓Index This Channel Files❓</b>\n\n🔖<b>Chat ID/ Username ›</b> <code>{chat_id}</code>',
             reply_markup=reply_markup)
 
     if type(chat_id) is int:
