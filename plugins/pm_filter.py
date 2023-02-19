@@ -405,9 +405,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Group ➕', callback_data='about')
         ], [
-            InlineKeyboardButton('❓How To Use Me❓', url=f'https://t.me/HeroFlix/1483'),
+            InlineKeyboardButton('❓How To Use Me❓', callback_data='help'),
         ], [            
-            InlineKeyboardButton('🗳 Help', callback_data='help'),
             InlineKeyboardButton('🔅 Group', url='https://telegram.me/+EdJU1Hqk1N80ZWQ1'),
             InlineKeyboardButton('🤖 Updates', url='https://telegram.me/HeroFlix')
         ]]
