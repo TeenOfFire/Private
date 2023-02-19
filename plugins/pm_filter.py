@@ -8,7 +8,7 @@ from Script import script
 import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
-from info import G_FILTER, SELF_DELETE, SELF_DELETE_SECONDS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION, HOW_TO_DWLD
+from info import G_FILTER, SELF_DELETE, SELF_DELETE_SECONDS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -80,7 +80,7 @@ async def next_page(bot, query):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="❓⟨ How To Download ⟩❓", url='HOW_TO_DWLD')
+            InlineKeyboardButton(text="❓⟨ How To Download ⟩❓", url='https://t.me/HeroFlix/1483')
         ]
     )
 
@@ -353,24 +353,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
                 return
-            elif settings['botpm']:
-                await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
-                return
-            else:
-                await client.send_cached_media(
-                    chat_id=query.from_user.id,
-                    file_id=file_id,
-                    caption=f_caption,
-                    protect_content=True if ident == "filep" else False 
-                )
-                await query.answer('I Sent The File To You Privately', show_alert=True)
-        except UserIsBlocked:
-            await query.answer('You Are Blocked to use me !', show_alert=True)
-        except PeerIdInvalid:
-            await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
-        except Exception as e:
-            await query.answer(url=f"https://telegram.me/{temp.U_NAME}?start={ident}_{file_id}")
-    elif query.data.startswith("checksub"):
+            elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
             await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒", show_alert=True)
             return
@@ -533,7 +516,7 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="❓⟨ How To Download ⟩❓", url='HOW_TO_DWLD')
+            InlineKeyboardButton(text="❓⟨ How To Download ⟩❓", url='https://t.me/HeroFlix/1483')
         ]
     )
 
