@@ -29,7 +29,7 @@ async def give_filter(client, message):
     k = await global_filters(client, message)
     if SELF_DELETE:
                 await asyncio.sleep(SELF_DELETE_SECONDS)
-                await hmm.delete()
+                await k.delete()
     if k == False:
         await auto_filter(client, message)
 
