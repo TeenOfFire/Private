@@ -436,8 +436,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
+            InlineKeyboardButton('➕ Click Here To Add Me ➕', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
+        ], [
             InlineKeyboardButton('🏠 HOME 🏠', callback_data='start'),
-         ]]
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
