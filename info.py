@@ -64,5 +64,5 @@ SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 1200))
 SELF_DELETE = environ.get('SELF_DELETE', True)
 if SELF_DELETE == "True":
     SELF_DELETE = True
-HOW_TO_DWLD = "https://t.me/HeroFlix/1483"
+HOW_TO_DWLD = "https://t.me/c/1835113759/18"
 
