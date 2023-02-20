@@ -12,7 +12,7 @@ def is_enabled(value, default):
 
 class script(object):
     START_TXT = """<i><b>🎃 Helo {}, I'm <a href=https://telegram.me/{}>{}</a></i></b> \n\n<i><b>🎗I Can Provide You Any Movies, Web-Series, Anime, K-Dramas, Animation, etc.,</i></b>"""
-    HELP_TXT = """<b>🥁 </b><b><u>How To Download Any Movie, Series, Anime etc., For Free???</u></b> \n\n<b>🎗Group [01]: </b><b>https://t.me/+WzsvFY3qXa9kZGVl</b> \n\n<b>🎗Group</b> <b>[02]: </b><b>https://t.me/+EdJU1Hqk1N80ZWQ1</b> \n\n<b>🔆</b> \n<b>🔆 Join Any Of Above Groups👆 </b> \n<b>🔆 Please Watch This Video👇</b> \n <b>🎬 https://t.me/HeroFlix/1541</b>"""
+    HELP_TXT = """<b>🥁 </b><b><u>How To Download Any Movie, Series, Anime etc., For Free???</u></b> \n\n<b>🎗Group [01]: </b><b>https://t.me/+WzsvFY3qXa9kZGVl</b> \n\n<b>🎗Group</b> <b>[02]: </b><b>https://t.me/+EdJU1Hqk1N80ZWQ1</b> \n\n<b>🔆</b> \n<b>🔆 Join Any Of Above Groups👆 </b> """
     ABOUT_TXT = """<i><b>🥁 Follow These Steps To Connect Me To Your Group👇</b>
 
 1. Click on "</i><i><b>Click Here To Add Me</b>" 
@@ -29,7 +29,7 @@ class script(object):
     LOG_TEXT_G = """<b>#NewGroup</b>
 <b>● Group »</b> {} 
 <b>● ID »</b> <code>{}</code>
-<b>● Total Members »</b> <code>{}</code>
+<b>● Total Members »</b> {}
 <b>● Added By »</b> {}
 """
     LOG_TEXT_P = """<b>#NewUser</b>
